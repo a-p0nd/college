@@ -14,17 +14,8 @@ body {
     /*Стандартный цвет */
     font-family: 'DM Sans', sans-serif;
     /*Задаем стандартный шрифт для проекта */
-    background: 
-    background-blend-mode: screen;
-	background-blend-mode: multiply;
-	background-blend-mode: overlay;
-	background-blend-mode: darken;
-	background-blend-mode: soft-light;
-	background-blend-mode: luminosity;	
-	background:
-	linear-gradient(red, transparent),
-	linear-gradient(to top left, lime, transparent),
-	linear-gradient(to top right, blue, transparent);
+    background: -webkit-linear-gradient(90deg, #131111,#43225e,#703b9c,#43225e,#131111);
+	background: linear-gradient(90deg, #131111,#43225e,#43225e,#43225e,#131111);
 }
 /*Задаем цвет фона*/
     
