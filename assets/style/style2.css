@@ -1,0 +1,230 @@
+/*полезно для размещения элементов. Оно сильно упрощает работу с размерами элементов, и как правило устраняет ряд 
+подводных камней, на которые вы можете наткнуться, размещая контент. 
+*/
+* {
+    box-sizing: border-box; 
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    /*Скидываем стандартные отступы и цвета*/
+    color: white;
+    /*Стандартный цвет */
+    font-family: 'DM Sans', sans-serif;
+    /*Задаем стандартный шрифт для проекта */
+    background: 
+    background-blend-mode: screen;
+	background-blend-mode: multiply;
+	background-blend-mode: overlay;
+	background-blend-mode: darken;
+	background-blend-mode: soft-light;
+	background-blend-mode: luminosity;	
+	background:
+	linear-gradient(red, transparent),
+	linear-gradient(to top left, lime, transparent),
+	linear-gradient(to top right, blue, transparent);
+}
+/*Задаем цвет фона*/
+    
+
+
+a {
+    /*Сбрасываем стандртное оформление ссылок*/
+    text-decoration: none;
+}
+
+::selection {
+    background-color: purple;
+    /*Меняет фон выделенного мышкой текста*/
+    color: black;
+    /*Меняет цвет внутри выделенного текста*/
+}
+
+img {
+    display: block;
+    /*Устанавливает фото в режим блок*/
+}
+
+.container {
+    width: 1248px;
+    /*Ширина контейнера */
+    margin: 0 auto;
+    /*позиционирование по центру*/
+}
+
+nav {
+    z-index: 1;
+    /*Выводит на 1 слой*/
+    backdrop-filter: blur(6px);
+    /*Задаем прозрачность фону*/
+    background-color: rgba(255, 255, 255, 0);
+    /* Цвет фона */
+    width: 1448px;
+    /* Ширина страницы */
+    margin-top: -140px;
+    /* Отстуа с верху  */
+    margin-left: -100px;
+    /* Отступ с лева  */
+    padding: 0 40px;
+    /* Внутренний отступ */
+    border-radius: 0 0 20px 20px;
+    /* Закругление */
+    position: fixed;
+    /* Фиксация положния  */
+    height: 100px;
+    /* Высота блока */
+    display: flex;
+    /* Для центрирования элемента по перекрёстной оси */
+    flex-direction: row;
+    /* Направление, в котором блоки будут располагаться в строку */
+    flex-wrap: nowrap;
+    /* Расположение в одну линию */
+    align-content: center;
+    /* Расположить элементы вокруг центра */
+    justify-content: space-between;
+    /* Равномерно распределяет все элементы по ширине flex-блока. */
+    align-items: center;
+    /* Для центрирования элемента по главной оси (в данном случае - горизонтально) */
+    user-select: none;
+}
+
+nav a {
+    font-size: 20px; 
+    /* Размер шрифта */
+    color: black;
+    /* Цвет ссылок */
+    margin: 0 20px;
+    /* Отступы */
+    transition: all .3s;
+    /* Применить к 1 свойству */
+    /* имя свойства | длительность */
+}
+
+nav a:hover {
+    color: rgba(255, 255, 255, 1);
+    /* Выделяет ссылки белым цветом  */
+}
+
+.inner {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    font-weight: 700;
+    background: linear-gradient(89.83deg, #2563EB 0.11%, #D946EF 58.65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+}
+
+.inner p {
+    color: black;
+    font-size: 18px;
+}
+
+.flex__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.flex__text {
+    font-size: 20px;
+    width: 500px;
+}
+
+.title {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
+.flex__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+    width: 1500px;
+    margin: 0 auto;
+}
+
+.card {
+    backdrop-filter: blur(25px);
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    width: 400px;
+    height: 600px;
+    border-radius: 40px;
+    padding: 40px;
+    text-align: center;
+    margin: 20px;
+    font-size: 17px;
+    transition: all .2s;
+    cursor: default;
+}
+
+.card:hover {
+    transform: translateY(10px);
+    box-shadow: 0px -10px 0px 0px rgba(152, 152, 152, 0.4);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 27px;
+}
+
+.developers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.developers__card {
+    backdrop-filter: blur(25px);
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 40px;
+    padding: 40px;
+    text-align: center;
+    margin: 20px;
+    font-size: 17px;
+    transition: all .2s;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.developers__card img {
+    width: 130px;
+}
+
+.developers__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 0px 0px rgba(152, 152, 152, 0.4);
+}
+
+.copy {
+    text-align: center;
+    margin: 50px 0;
+}
